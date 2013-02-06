@@ -36,3 +36,8 @@ ark "phantomjs" do
   action :install
   path "/opt"
 end
+
+# Set up the symbolic link
+link '/usr/bin/phantomjs' do
+  to "/opt/#{basename}/bin/phantomjs"
+end
